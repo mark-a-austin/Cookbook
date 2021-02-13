@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="0c819863-dc41-4e0a-a2b0-ecbd4c28348c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Account.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Branch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recipe.py" afterDir="false" />
-    </list>
-=======
   <component name="ChangeListManager">
     <list default="true" id="33d04dab-204e-4adb-8cf7-d2c606c6d357" name="Default Changelist" comment="" />
->>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,51 +17,70 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="1oQSOnxtLgqba9uxSMxzxGQnAGV" />
-=======
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/LoginGUI.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1oQLeAv1qoxyUQFGaE6SruCv7wK" />
->>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0c819863-dc41-4e0a-a2b0-ecbd4c28348c" name="Default Changelist" comment="" />
-      <created>1613217292070</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1613217292070</updated>
-    </task>
-    <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="687" y="243" key="search.everywhere.popup" timestamp="1613218437345">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="687" y="243" key="search.everywhere.popup/0.0.2048.1112/-1080.329.1080.1880@0.0.2048.1112" timestamp="1613218437345" />
-=======
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recipe-Hub" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/File.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recipe-Hub" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.File" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -104,10 +96,45 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="370" y="450" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613217339668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="370" y="450" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613217339668" />
+    <state width="1256" height="483" key="GridCell.Tab.0.bottom" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.0.center" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.0.left" timestamp="1613221866677">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866677" />
+    <state width="1256" height="483" key="GridCell.Tab.0.right" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.1.bottom" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.1.center" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.1.left" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
+    <state width="1256" height="483" key="GridCell.Tab.1.right" timestamp="1613221866678">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="483" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613221866678" />
     <state x="285" y="442" key="SettingsEditor" timestamp="1613215683843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="285" y="442" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613215683843" />
->>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
   </component>
 </project>
