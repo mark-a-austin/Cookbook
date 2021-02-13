@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -24,6 +25,10 @@
       <change afterPath="$PROJECT_DIR$/Branch.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Recipe.py" afterDir="false" />
     </list>
+=======
+  <component name="ChangeListManager">
+    <list default="true" id="33d04dab-204e-4adb-8cf7-d2c606c6d357" name="Default Changelist" comment="" />
+>>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,13 +44,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="1oQSOnxtLgqba9uxSMxzxGQnAGV" />
+=======
+  <component name="ProjectId" id="1oQLeAv1qoxyUQFGaE6SruCv7wK" />
+>>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,5 +85,29 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="687" y="243" key="search.everywhere.popup/0.0.2048.1112/-1080.329.1080.1880@0.0.2048.1112" timestamp="1613218437345" />
+=======
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33d04dab-204e-4adb-8cf7-d2c606c6d357" name="Default Changelist" comment="" />
+      <created>1613213960835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613213960835</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="285" y="442" key="SettingsEditor" timestamp="1613215683843">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="285" y="442" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613215683843" />
+>>>>>>> b5dd6f34d1993bf2ef1042aba7c804b49bc95443
   </component>
 </project>
