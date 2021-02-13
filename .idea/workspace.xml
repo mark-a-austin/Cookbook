@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33d04dab-204e-4adb-8cf7-d2c606c6d357" name="Default Changelist" comment="" />
+    <list default="true" id="33d04dab-204e-4adb-8cf7-d2c606c6d357" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +38,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/GUI/LoginGUI.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/GUI/LoginGUI.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1oQLeAv1qoxyUQFGaE6SruCv7wK" />
   <component name="ProjectViewState">
