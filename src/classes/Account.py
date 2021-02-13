@@ -1,8 +1,10 @@
 class Account:
 
-    def __init__(self, account_id, chef_name, username, password):
+    def __init__(self, account_id, email, firstname, lastname, username, password):
         self.account_id = account_id
         self.email = email
+        self.firstname = firstname
+        self.lastname = lastname
         self.username = username
         self.password = password
         self.created_recipes = list();  # Branches of all their recipes
