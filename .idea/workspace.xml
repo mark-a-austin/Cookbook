@@ -36,7 +36,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/LoginGUI.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/GUI/LoginGUI.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1oQLeAv1qoxyUQFGaE6SruCv7wK" />

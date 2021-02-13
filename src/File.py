@@ -21,5 +21,5 @@ def fileReader(filename):
 
 if __name__ == "__main__":
     # ("loginDetails.txt", ["mark", "pass"])
-    list = fileReader("loginDetails.txt")
+    list = fileReader("Database/loginDetails.txt")
     print(list)
