@@ -12,14 +12,16 @@ def fileReader(filename):
     contents = []
     with open(filename, 'r') as csvFile:
         csvReader = csv.reader(csvFile, delimiter=',')
+        count = 0
         for i in csvReader:
-            if i:
+            if i and count != 0:
                 contents.append(i)
+            count += 1
     csvFile.close()
     return contents
 
 
 if __name__ == "__main__":
     # ("loginDetails.txt", ["mark", "pass"])
-    list = fileReader("Database/loginDetails.txt")
+    list = fileReader("../Database/loginDetails.txt")
     print(list)

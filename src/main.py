@@ -20,12 +20,21 @@ class GUI:
         self.bntFont = Font(family="Segoe UI", size="14")
 
         self.LoginFrame = Frame(self.root)
-        self.frameList = [self.LoginFrame]
+        self.RecipeFrame = Frame(self.root)
+        self.frameList = [self.LoginFrame, self.RecipeFrame]
         for frame in self.frameList:
             frame.grid(row=0, column=0, sticky='news')
 
 
         self.Login = Login(self.LoginFrame, self.headingFont,self.lblFont, self.bntFont, GUI.WHITE, GUI.GREY, GUI.BLUE)
+        self.Login.bntLogin.config(command = self.login())
+
+    def login(self):
+        if (Login.login()):
+            moveScreen(self.RecipeFrame)
+        else:
+            messagebox.showerror("User credentials Not Recognised","No accounts for with these credentails please try again!")
+
 
 
 

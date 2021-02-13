@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.font import Font
 from tkinter import simpledialog, filedialog, messagebox
+from src.classes.File import *
 
 
 class Login:
@@ -32,3 +33,25 @@ class Login:
 
         self.bntLogin = Button(self.loginFrame, text = "Login", width = 40, bg = blue, fg = white, font = bntFont, relief = FLAT, bd = 1)
         self.bntLogin.grid(row=5,column=0,padx=5, pady = 20)
+
+    def clearField(self):
+        self.username.set("")
+        self.password.set("")
+
+    def getUsername(self):
+        return self.username
+    def getPassword(self):
+        return self.password
+
+    def login(self):
+        username = getUsername() #index 4
+        password = getPassword() #index 5
+
+        getAccounts = fileReader("account.txt")
+        for i in getAccounts:
+            if username == i[4] and password == i[5]:
+                return true;
+        return false
+
+
+
