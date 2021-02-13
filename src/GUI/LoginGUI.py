@@ -15,7 +15,6 @@ class Login:
         self.lblLogin.grid(row=0,column=0, sticky = "W", columnspan = 2, padx = 5)
 
 
-
         self.lblUsername = Label(self.loginFrame, text = "Username", font = lblFont, bg = white, fg = grey )
         self.lblUsername.grid(row=1,column=0, padx = 5, sticky = 'W')
 

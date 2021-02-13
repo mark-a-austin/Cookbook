@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter.font import Font
 from tkinter import simpledialog, filedialog, messagebox
-from LoginGUI import Login
+from src.GUI.LoginGUI import Login
 
 
 class GUI:
@@ -11,11 +11,11 @@ class GUI:
 
     def __init__(self):
         self.root = Tk()
-        self.root.title("Recipe Hub")
+        self.root.title("Cookbook")
         self.root.config(bg = GUI.WHITE)
         self.root.config(width = 1080, height = 1080)
 
-        self.headingFont = Font(family="Segoe UI", size="34")
+        self.headingFont = Font(family="Segoe UI Semibold", size="45")
         self.lblFont = Font(family="Segoe UI", size="15")
         self.bntFont = Font(family="Segoe UI", size="14")
 
