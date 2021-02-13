@@ -22,7 +22,6 @@ def fileReader(filename):
 
 
 if __name__ == "__main__":
-    # ("loginDetails.txt", ["mark", "pass"])
     list = fileReader("../Database/accounts.csv")
     print(len(list))
     print(list)
