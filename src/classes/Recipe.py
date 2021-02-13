@@ -38,7 +38,6 @@ class Recipe:
 
 
 
-
     def set_recipe_id(self, recipe_id):
         self.recipe_id = recipe_id
 
