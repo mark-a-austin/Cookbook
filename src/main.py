@@ -47,6 +47,7 @@ class GUI:
 
         self.Home = Home(self.HomeFrame, self.headingFont, self.lblFont, self.bntFont, self.titleFont, GUI.WHITE, GUI.GREY, GUI.BLUE, GUI.BLACK, GUI.YELLOW)
         self.Home.bntAddRecipe.config(command= self.createRecipe)
+        self.Home.bntLogout.config(command= lambda : self.moveScreen(self.LoginFrame))
 
 
     def login(self):

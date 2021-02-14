@@ -86,22 +86,32 @@ class Home:
         self.Recipe = LabelFrame(self.root, text='', bg = white, bd = 0)
         self.Recipe.grid(row=3,column=1)
 
+        self.lblURL = Label(self.Recipe, text = 'Enter a url to add a recipe', font = Font(family = "product san", size ="30"), bg = white, fg= black)
+        self.lblURL.grid(row=0,column=0)
+
         self.searchRecipe = StringVar()
-        self.searchRecipe.set("Search recipes and more")
+        self.searchRecipe.set("Enter your URL")
         self.entSearchRecipe = Entry(self.Recipe, textvariable = self.searchRecipe, width = 50, bg = white, fg = grey, bd = 1, font = lblFont)
-        self.entSearchRecipe.grid(row=0,column=0)
+        self.entSearchRecipe.grid(row=1,column=0)
+
+        self.bntAddUrl = Button(self.Recipe, image = self.addIcon, bg = white, relief = FLAT)
+        self.bntAddUrl.grid(row=1,column=1,sticky='W')
 
         self.RecipeStyle = ttk.Style()
         self.RecipeStyle.configure('AP.Treeview.Heading', font= self.titleFont, bg = white, fg = black)
         self.RecipeStyle.theme_use('alt')
         self.RecipeStyle.configure('AP.Treeview', font = self.lblFont, rowheight = 40)
 
-        self.viewRecipes = TreeviewMaker(self.Recipe, ['Recipe ID', 'Name','Cook Time','Serving'], ['Name','Cook Time','Serving'], 50, 350, 'AP.Treeview')
-        self.viewRecipes.treeview.grid(row=1, pady = 10)
+
+        self.viewRecipes = TreeviewMaker(self.Recipe, ['Recipe ID', 'Name','Cook Time','Serving'], ['Name','Cook Time','Serving'], 50, 600, 'AP.Treeview')
+        self.viewRecipes.treeview.grid(row=2, pady = 10, column = 0, columnspan = 2)
+        self.viewRecipes.treeview.column('Cook Time', width = 100)
+        self.viewRecipes.treeview.column('Serving', width = 150)
         self.populateTreeview()
 
         self.bntLogout = Button(self.root, font= self.lblFont, bg = 'red', fg = white, text = 'Logout')
         self.bntLogout.grid(row=4,column=1)
+
 
 
     def createRecipe(self, id):
