@@ -25,80 +25,86 @@ def getRecipeID():
     recipes = fileReader("Database/recipes.csv")
     return recipes[len(recipes) - 1][0]
 
-if (subStringURL in requestURL):
-    source = requests.get(requestURL).text
-    soup = BeautifulSoup(source, 'lxml')
+def scrape(requestURL):
+    print(requestURL)
+    print(subStringURL)
 
-    # Adds each section to a list on html
-    sectionList = []
-    sectionList.append(soup.find('section', class_="header header--masthead post__header mb-lg"))
-    sectionList.append(soup.find('section', class_="recipe__ingredients col-12 mt-md col-lg-6"))
-    sectionList.append(soup.find('section', class_="recipe__method-steps mb-lg col-12 col-lg-6"))
+    if subStringURL in requestURL:
+        print("wa")
+        source = requests.get(requestURL).text
+        soup = BeautifulSoup(source, 'lxml')
 
-    # ###############SECTION 0 ######################
+        # Adds each section to a list on html
+        sectionList = []
+        sectionList.append(soup.find('section', class_="header header--masthead post__header mb-lg"))
+        sectionList.append(soup.find('section', class_="recipe__ingredients col-12 mt-md col-lg-6"))
+        sectionList.append(soup.find('section', class_="recipe__method-steps mb-lg col-12 col-lg-6"))
 
-    # #RECIPE NAME
-    recipe = soup.find('h1')
-    nameOfRecipe = recipe.text
+        # ###############SECTION 0 ######################
 
-    uls = sectionList[0].find('ul', class_="header__row header__planning mb-xxs list list--horizontal")
+        # #RECIPE NAME
+        recipe = soup.find('h1')
+        nameOfRecipe = recipe.text
 
-    # List for timing
-    listOfLi = []
-    for li in uls:
-        listOfLi.append(li)
+        uls = sectionList[0].find('ul', class_="header__row header__planning mb-xxs list list--horizontal")
 
-    times = listOfLi[0].find('ul')
+        # List for timing
+        listOfLi = []
+        for li in uls:
+            listOfLi.append(li)
 
-    # First time is prep and 2nd is cook
-    listOfTimes = []
-    for li in times:
-        listOfTimes.append(li.find('time').text)
+        times = listOfLi[0].find('ul')
 
-    # LIST OF FIRST SECTION
-    prepTime = listOfTimes[0]
-    cookTime = listOfTimes[1]
+        # First time is prep and 2nd is cook
+        listOfTimes = []
+        for li in times:
+            listOfTimes.append(li.find('time').text)
 
-    difficulty = listOfLi[1].text
-    servings = listOfLi[2].text
+        # LIST OF FIRST SECTION
+        prepTime = listOfTimes[0]
+        cookTime = listOfTimes[1]
 
-    # ###############SECTION 1 ######################
+        difficulty = listOfLi[1].text
+        servings = listOfLi[2].text
 
-    ul2 = sectionList[1].find('ul')
+        # ###############SECTION 1 ######################
 
-    for li in ul2:
-        listOfIngredients.append(li.text)
+        ul2 = sectionList[1].find('ul')
 
-    # ###############SECTION 2 ######################
+        for li in ul2:
+            listOfIngredients.append(li.text)
 
-    ul3 = sectionList[2].find('ul')
+        # ###############SECTION 2 ######################
 
-    for li in ul3:
-        listOfMethods.append(li.p.text)
+        ul3 = sectionList[2].find('ul')
 
-    # Outputs
-    print("LIST")
-    print(nameOfRecipe)
-    print(prepTime)
-    print(cookTime)
-    print(difficulty)
-    print(servings)
+        for li in ul3:
+            listOfMethods.append(li.p.text)
 
-    print("INGREDIENTS")
-    for ingredients in listOfIngredients:
-        print(ingredients)
+        # Outputs
+        print("LIST")
+        print(nameOfRecipe)
+        print(prepTime)
+        print(cookTime)
+        print(difficulty)
+        print(servings)
 
-    print("METHODS")
-    for methods in listOfMethods:
-        print(methods)
+        print("INGREDIENTS")
+        for ingredients in listOfIngredients:
+            print(ingredients)
 
-    id = int(getRecipeID()) + 1
-    new = Recipe(id, nameOfRecipe, listOfIngredients, listOfMethods, 'Desert', "English", "15", cookTime, servings, 3)
-    new.add_recipe()
+        print("METHODS")
+        for methods in listOfMethods:
+            print(methods)
+
+        id = int(getRecipeID()) + 1
+        new = Recipe(id, nameOfRecipe, listOfIngredients, listOfMethods, 'Desert', "English", "15", cookTime, servings, 3)
+        new.add_recipe()
+        return True;
 
 
 
-else:
-    print("Not a valid BBC site")
+    else:
+        return False;
 
 

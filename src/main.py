@@ -4,9 +4,9 @@ from tkinter import simpledialog, filedialog, messagebox
 from src.GUI.LoginGUI import Login
 from src.GUI.SignUpGUI import SignUp
 from src.GUI.HomeGUI import Home
+from src.GUI.DisplayRecipeGUI import DisplayRecipe
 from src.classes.Account import Account
-
-#TODO take image from website and then use OCR to convert text
+from src.WebScrapingFood import *
 
 
 class GUI:
@@ -32,7 +32,8 @@ class GUI:
         self.LoginFrame = Frame(self.root)
         self.SignUpFrame = Frame(self.root)
         self.HomeFrame = Frame(self.root)
-        self.frameList = [self.LoginFrame, self.SignUpFrame, self.HomeFrame]
+        self.RecipeFrame = Frame(self.root)
+        self.frameList = [self.LoginFrame, self.SignUpFrame, self.HomeFrame, self.RecipeFrame]
         for frame in self.frameList:
             frame.grid(row=0, column=0, sticky='news')
 
@@ -48,6 +49,10 @@ class GUI:
         self.Home = Home(self.HomeFrame, self.headingFont, self.lblFont, self.bntFont, self.titleFont, GUI.WHITE, GUI.GREY, GUI.BLUE, GUI.BLACK, GUI.YELLOW)
         self.Home.bntAddRecipe.config(command= self.createRecipe)
         self.Home.bntLogout.config(command= lambda : self.moveScreen(self.LoginFrame))
+        self.Home.bntAddUrl.config(command = self.get_URL)
+        self.Home.viewRecipes.treeview.bind("<Double-1>", lambda e: self.moveScreen(self.RecipeFrame))
+
+        self.Recipe = DisplayRecipe(self.RecipeFrame, self.headingFont, self.lblFont, self.bntFont, self.titleFont, GUI.WHITE, GUI.GREY, GUI.BLUE, GUI.BLACK, GUI.YELLOW)
 
 
     def login(self):
@@ -67,6 +72,14 @@ class GUI:
              #moving the screeen
     def createRecipe(self):
         self.Home.createRecipe(self.Account.get_account_id())
+
+    def get_URL(self):
+        sucess = scrape(self.Home.entSearchRecipe.get())
+        if sucess:
+            messagebox.showinfo("Success","Your recipe was added to the database")
+            self.Home.populateTreeview()
+        else:
+            messagebox.showerror("Error", "Your url was not supported")
 
 
 
