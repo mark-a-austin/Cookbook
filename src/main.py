@@ -4,6 +4,7 @@ from tkinter import simpledialog, filedialog, messagebox
 from src.GUI.LoginGUI import Login
 from src.GUI.SignUpGUI import SignUp
 from src.GUI.HomeGUI import Home
+from src.classes.Account import Account
 
 #TODO take image from website and then use OCR to convert text
 
@@ -20,6 +21,8 @@ class GUI:
         self.root.title("Cookbook")
         self.root.config(bg = GUI.WHITE)
         self.root.config(width = 1080, height = 1080)
+
+        self.Account = Account(-1, "", "", "", "", "")
 
         self.titleFont = Font(family="product sans bold", size = "55")
         self.headingFont = Font(family="product sans bold", size="45")
@@ -43,17 +46,26 @@ class GUI:
         self.SignUp.bntLogin.config(command = lambda: self.moveScreen(self.LoginFrame))
 
         self.Home = Home(self.HomeFrame, self.headingFont, self.lblFont, self.bntFont, self.titleFont, GUI.WHITE, GUI.GREY, GUI.BLUE, GUI.BLACK, GUI.YELLOW)
+        self.Home.bntAddRecipe.config(command= self.createRecipe)
+
 
     def login(self):
         if (Login.login(self.Login)):
+            self.Account.login(self.Login.getUsername())
+            self.Login.clearField()
             self.moveScreen(self.HomeFrame)
+
         else:
             messagebox.showerror("User credentials Not Recognised","No accounts for with these credentails please try again!")
 
     def signup(self):
-        if(SignUp.signup(self.SignUp)):
-            pass #moving the screeen
-
+        if(self.SignUp.signup()):
+            self.Account.login(self.SignUp.getEmail())
+            self.SignUp.clearField()
+            self.moveScreen(self.HomeFrame)
+             #moving the screeen
+    def createRecipe(self):
+        self.Home.createRecipe(self.Account.get_account_id())
 
 
 

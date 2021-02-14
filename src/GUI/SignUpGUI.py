@@ -16,7 +16,7 @@ class SignUp:
         self.logo = Image.open("imgs/CookBook.png")
         self.logoPH = ImageTk.PhotoImage(self.logo)
 
-        self.box = Label(self.blueBox, text="", bg=blue, fg=blue, bd=0, width=70, height=30, font=lblFont)
+        self.box = Label(self.blueBox, text="", bg=blue, fg=blue, bd=0, width=70, height=43, font=lblFont)
         self.box.grid(row=0, column=0)
 
         self.lblLogo = Label(self.blueBox, image=self.logoPH, bg=blue)
@@ -96,7 +96,6 @@ class SignUp:
             return False;
         else:
             fileWriter("Database/accounts.csv",[userID,email,firstname,lastname,email,password])
-            self.clearField()
             return True;
 
     def checkForClear(self, list):

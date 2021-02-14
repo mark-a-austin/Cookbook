@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
+from src.classes.Recipe import *
+from src.classes.File import *
 
 # https://www.bbcgoodfood.com/recipes/
 # Find your recipe!
@@ -14,9 +16,14 @@ servings = ''
 listOfIngredients = []
 listOfMethods = []
 
-requestURL = 'https://www.bbcgoodfood.com/recipes/best-ever-fluffy-american-pancakes-cherry-berry-syrup'
+requestURL = 'https://www.bbcgoodfood.com/recipes/carrot-cake'
 
 subStringURL = 'https://www.bbcgoodfood.com/recipes/'
+
+
+def getRecipeID():
+    recipes = fileReader("Database/recipes.csv")
+    return recipes[len(recipes) - 1][0]
 
 if (subStringURL in requestURL):
     source = requests.get(requestURL).text
@@ -85,5 +92,13 @@ if (subStringURL in requestURL):
     for methods in listOfMethods:
         print(methods)
 
+    id = int(getRecipeID()) + 1
+    new = Recipe(id, nameOfRecipe, listOfIngredients, listOfMethods, 'Desert', "English", "15", cookTime, servings, 3)
+    new.add_recipe()
+
+
+
 else:
     print("Not a valid BBC site")
+
+

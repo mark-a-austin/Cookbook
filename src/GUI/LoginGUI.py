@@ -19,7 +19,7 @@ class Login:
         self.logoPH = ImageTk.PhotoImage(self.logo)
 
 
-        self.box = Label(self.blueBox, text = "", bg = blue, fg = blue, bd = 0, width = 100, height = 30, font = lblFont)
+        self.box = Label(self.blueBox, text = "", bg = blue, fg = blue, bd = 0, width = 100, height = 43, font = lblFont)
         self.box.grid(row=0,column=0)
 
         self.lblLogo = Label(self.blueBox, image=self.logoPH, bg=blue)
@@ -72,9 +72,7 @@ class Login:
 
         getAccounts = fileReader("Database/accounts.csv")
         for i in getAccounts:
-            print(i[4] == username)
             if (username == i[4]) and (password == i[5]):
-                self.clearField()
                 return True;
 
         return False
