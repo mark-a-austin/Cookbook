@@ -53,7 +53,7 @@ class GUI:
         self.Home.viewRecipes.treeview.bind("<Double-1>", lambda e: self.moveScreen(self.RecipeFrame))
 
         self.Recipe = DisplayRecipe(self.RecipeFrame, self.headingFont, self.lblFont, self.bntFont, self.titleFont, GUI.WHITE, GUI.GREY, GUI.BLUE, GUI.BLACK, GUI.YELLOW)
-
+        self.Recipe.bntPizza.config(command = lambda : self.moveScreen(self.HomeFrame))
 
     def login(self):
         if (Login.login(self.Login)):
