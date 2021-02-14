@@ -100,6 +100,9 @@ class Home:
         self.viewRecipes.treeview.grid(row=1, pady = 10)
         self.populateTreeview()
 
+        self.bntLogout = Button(self.root, font= self.lblFont, bg = 'red', fg = white, text = 'Logout')
+        self.bntLogout.grid(row=4,column=1)
+
 
     def createRecipe(self, id):
         self.newRecipe = AddRecipe(id, self.headFont, self.lblFont, self.bntFont, self.white, self.grey, self.blue, self.black, self.yellow)
