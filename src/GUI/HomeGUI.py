@@ -94,13 +94,21 @@ class Home:
         self.RecipeStyle = ttk.Style()
         self.RecipeStyle.configure('AP.Treeview.Heading', font= self.titleFont, bg = white, fg = black)
         self.RecipeStyle.theme_use('alt')
-        self.RecipeStyle.configure('AP.Treeview', font = self.titleFont, rowheight = 40)
+        self.RecipeStyle.configure('AP.Treeview', font = self.lblFont, rowheight = 40)
 
-        self.viewRecipes = TreeviewMaker(self.Recipe, ['Recipe ID', 'Name','Cook Time','Serving'], ['Name','Cook Time','Serving'], 50, 150, 'AP.Treeview')
+        self.viewRecipes = TreeviewMaker(self.Recipe, ['Recipe ID', 'Name','Cook Time','Serving'], ['Name','Cook Time','Serving'], 50, 350, 'AP.Treeview')
         self.viewRecipes.treeview.grid(row=1, pady = 10)
+        self.populateTreeview()
 
 
     def createRecipe(self, id):
         self.newRecipe = AddRecipe(id, self.headFont, self.lblFont, self.bntFont, self.white, self.grey, self.blue, self.black, self.yellow)
 
+    def getRecipes(self):
+        return fileReader("Database/recipes.csv")
+
+    def populateTreeview(self):
+        self.recipes = self.getRecipes()
+        for recipe in self.recipes:
+            self.viewRecipes.treeview.insert('','end',text='',values=(recipe[0], recipe[1], recipe[7],recipe[8]))
 
